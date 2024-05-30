@@ -28,6 +28,8 @@ click = "^8.1.7"
 python-dotenv = "1.0.0"
 embedchain = "^0.1.98"
 appdirs = "^1.4.4"
+langchain_google_genai = "1.0.3"
+google-generativeai = "0.5.2"
 
 [tool.poetry.extras]
 tools = ["crewai-tools"]
