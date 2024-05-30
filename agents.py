@@ -17,7 +17,7 @@ class CustomAgents:
             goal=dedent("""\
                 Identify routine, repetitive, or time-consuming tasks within the user's business operations that can be automated to increase efficiency and reduce operational costs."""),
             verbose=True,
-            llm=self.gemini,
+            llm=self.gemini-pro,
         )
 
     def solutions_architect_agent(self):
@@ -29,6 +29,6 @@ class CustomAgents:
             goal=dedent("""\
                 Develop detailed, actionable CrewAI setups for automating the identified business processes, showcasing the workflow, expected results, and implementation guidelines."""),
             verbose=True,
-            llm=self.gemini,
+            llm=self.gemini-pro,
         )
 
