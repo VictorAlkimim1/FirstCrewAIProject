@@ -1,11 +1,12 @@
 from crewai import Agent
 from textwrap import dedent
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatGoogleGenerativeAI
 
 class CustomAgents:
     def __init__(self):
         # Initialize a GPT-4 model from ChatOpenAI for generating and analyzing content
-        self.gpt_model = ChatOpenAI(model_name="gpt-4", temperature=0.7)
+        self.llm = ChatGoogleGenerativeAI(model_name="gemini-pro", verbose=True,
+    temperature=0.5)
 
     def business_analyst_agent(self):
         """An agent specialized in analyzing business processes to identify automation opportunities."""
@@ -16,7 +17,7 @@ class CustomAgents:
             goal=dedent("""\
                 Identify routine, repetitive, or time-consuming tasks within the user's business operations that can be automated to increase efficiency and reduce operational costs."""),
             verbose=True,
-            llm=self.gpt_model,
+            llm=self.gemini-pro,
         )
 
     def solutions_architect_agent(self):
@@ -28,6 +29,6 @@ class CustomAgents:
             goal=dedent("""\
                 Develop detailed, actionable CrewAI setups for automating the identified business processes, showcasing the workflow, expected results, and implementation guidelines."""),
             verbose=True,
-            llm=self.gpt_model,
+            llm=self.gemini-pro,
         )
 
