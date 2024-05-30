@@ -5,7 +5,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 class CustomAgents:
     def __init__(self):
         # Initialize a GPT-4 model from ChatOpenAI for generating and analyzing content
-        self.llm = ChatGoogleGenerativeAI(model_name="gemini-pro", verbose=True,
+        self.llm = ChatGoogleGenerativeAI(model="gemini-pro", verbose=True,
     temperature=0.5)
 
     def business_analyst_agent(self):
@@ -17,7 +17,7 @@ class CustomAgents:
             goal=dedent("""\
                 Identify routine, repetitive, or time-consuming tasks within the user's business operations that can be automated to increase efficiency and reduce operational costs."""),
             verbose=True,
-            llm=self.gemini-pro,
+            llm=self.gemini,
         )
 
     def solutions_architect_agent(self):
@@ -29,6 +29,6 @@ class CustomAgents:
             goal=dedent("""\
                 Develop detailed, actionable CrewAI setups for automating the identified business processes, showcasing the workflow, expected results, and implementation guidelines."""),
             verbose=True,
-            llm=self.gemini-pro,
+            llm=self.gemini,
         )
 
