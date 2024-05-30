@@ -1,6 +1,6 @@
 from crewai import Agent
 from textwrap import dedent
-from langchain_openai import ChatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 class CustomAgents:
     def __init__(self):
